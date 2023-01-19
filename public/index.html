@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas 3 | Node.js</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>sukses jalur langit</h1>
+        <hr>
+
+    </div>
+
+    <script>
+    async function a(){
+    const res = await fetch(`/api/jalurlangit`);
+    const data = await res.json();
+    const data1 = document.createElement("a");// membuat element/ tag;
+    data1.textContent = data.kata; //menampung data/ mengisi data ke html
+    const tamp = document.querySelector(".container");//menampung atau mengambil tag yang classnya constractor(bebas);
+    tamp.appendChild(data1);
+    
+
+}
+a();
+    </script>
+</body>
+</html>
